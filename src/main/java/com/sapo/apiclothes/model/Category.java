@@ -15,10 +15,8 @@ public class Category {
     private int id;
     @Column(name ="name")
     private String name;
-
     public Category() {
     }
-
     public int getId() {
         return id;
     }

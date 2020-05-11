@@ -1,6 +1,8 @@
 package com.sapo.apiclothes.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
@@ -16,6 +18,7 @@ public class ProductDetail {
     private AttributeValue attributevalue;
     @ManyToOne
     @JoinColumn(name="id_product")
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     private Products product;
 
     public ProductDetail() {
